@@ -1,0 +1,10 @@
+# command 파일
+command:
+  description: Generate multiple files (such as controller, facade, dao...)
+  options:
+    - name: entity
+      description: name of the entity package
+      dataType: string
+      defaultValue: sample
+      inputType: text
+      required: true
