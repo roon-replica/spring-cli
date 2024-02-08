@@ -1,5 +1,5 @@
 // Templated Java File
-package {{root-package}}.{{feature}}
+package {{root-package}}.{{feature}};
 
 @RestController
 public class {{capitalizeFirst feature}}Controller {
