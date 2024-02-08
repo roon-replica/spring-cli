@@ -1,0 +1,5 @@
+# action 파일
+actions:
+  - generate:
+      to: src/main/java/{{root-package-dir}}/{{feature}}/{{capitalizeFirst feature}}Controller.java # 파일이 생성될 위치
+      from: RestController.java
