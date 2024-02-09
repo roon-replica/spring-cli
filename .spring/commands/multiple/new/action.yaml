@@ -1,7 +1,13 @@
 actions:
   - generate:
-      to: src/main/java/{{root-package-dir}}/{{entity}}/Internal{{capitalizeFirst entity}}Controller.java # 파일이 생성될 위치
-      from: RestController.java
+      to: src/main/java/{{root-package-dir}}/internal/Internal{{capitalizeFirst entity}}Controller.java # 파일이 생성될 위치
+      from: InternalController.java
   - generate:
-      to: src/main/java/{{root-package-dir}}/{{entity}}/{{capitalizeFirst entity}}Facade.java # 파일이 생성될 위치
-      from: Facade.java
+      to: src/main/java/{{root-package-dir}}/internal/facade/Internal{{capitalizeFirst entity}}Facade.java # 파일이 생성될 위치
+      from: InternalFacade.java
+  - generate:
+      to: src/main/java/{{root-package-dir}}/internal/dao/Internal{{capitalizeFirst entity}}Dao.java # 파일이 생성될 위치
+      from: InternalDao.java
+  - generate:
+      to: src/main/java/{{root-package-dir}}/internal/dto/Internal{{capitalizeFirst entity}}Dto.java # 파일이 생성될 위치
+      from: InternalDto.java

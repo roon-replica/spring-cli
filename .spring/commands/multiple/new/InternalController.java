@@ -1,5 +1,16 @@
 // Templated Java File
-package {{root-package}}.{{entity}};
+package {{root-package}}.internal;
+
+
+import {{root-package}}.internal.dto.InternalBadgeDto;
+import {{root-package}}.internal.facade.InternalBadgeFacade;
+
+import io.swagger.v3.oas.annotations.Operation;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @InternalApiInterface
 public class Internal{{capitalizeFirst entity}}Controller {
