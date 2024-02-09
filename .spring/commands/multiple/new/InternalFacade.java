@@ -2,27 +2,22 @@ package {{root-package}}.internal.facade;
 
 import {{root-package}}.internal.dao.InternalBadgeDao;
 import {{root-package}}.internal.dto.InternalBadgeDto;
-
 import org.springframework.stereotype.Component;
 
 @Component
-public class Internal{{capitalizeFirst entity}}Facade {
+public class Internal{{entity}}Facade {
 
-	private final Internal{{capitalizeFirst entity}}Dao internal{{capitalizeFirst entity}}Dao;
+	private final Internal{{entity}}Dao internal{{entity}}Dao;
 
-	public Internal{{capitalizeFirst entity}}Facade(Internal{{capitalizeFirst entity}}Dao internal{{capitalizeFirst entity}}Dao) {
-		this.internal{{capitalizeFirst entity}}Dao = internal{{capitalizeFirst entity}}Dao;
+	public Internal{{entity}}Facade(Internal{{entity}}Dao internal{{entity}}Dao) {
+		this.internal{{entity}}Dao = internal{{entity}}Dao;
 	}
 
-	public Internal{{capitalizeFirst entity}}Dto get{{capitalizeFirst entity}}ById(String id) {
-
-		return internal{{capitalizeFirst entity}}Dao.get{{capitalizeFirst entity}}ById(id).orElseThrow({{capitalizeFirst entity}}NotFoundException::new);
-
-	public PageNumberBasedPage<Internal{{capitalizeFirst entity}}Dto> get{{capitalizeFirst entity}}s(int page, int pageSize) {
-			return PageNumberBasedPage.convert(internal{{capitalizeFirst entity}}Dao.get{{capitalizeFirst entity}}s(page, pageSize),
-					page, pageSize, internal{{capitalizeFirst entity}}Dao.getTotalCount(name));
-
+	public Internal{{entity}}Dto get{{entity}}ById(String id) {
+		return internal{{entity}}Dao.get{{entity}}ById(id).orElseThrow({{entity}}NotFoundException::new);
 	}
 
-	}
+	public PageNumberBasedPage<Internal{{entity}}Dto> get{{entity}}s(int page, int pageSize) {
+			return PageNumberBasedPage.convert(internal{{entity}}Dao.get{{entity}}s(page, pageSize),
+					page, pageSize, internal{{entity}}Dao.getTotalCount(name)); }
 }

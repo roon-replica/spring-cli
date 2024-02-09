@@ -8,11 +8,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Schema(description = "Internal {{capitalizeFirst entity}} 정보")
+@Schema(description = "Internal {{entity}} 정보")
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
-@Document({{capitalizeFirst entity}}.COLLECTION_NAME)
-public class Internal{{capitalizeFirst entity}}Dto {
+@Document({{entity}}.COLLECTION_NAME)
+public class Internal{{entity}}Dto {
 
 	private String id;
 }

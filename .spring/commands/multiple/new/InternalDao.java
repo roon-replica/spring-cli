@@ -12,27 +12,25 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Internal{{capitalizeFirst entity}}Dao {
+public class Internal{{entity}}Dao {
 
 	private final MongoTemplate mongoTemplate;
 
-	public Internal{{capitalizeFirst entity}}Dao(MongoTemplate mongoTemplate) {
+	public Internal{{entity}}Dao(MongoTemplate mongoTemplate) {
 		this.mongoTemplate = mongoTemplate;
 	}
 
-	public Optional<Internal{{capitalizeFirst entity}}Dto> get{{capitalizeFirst entity}}ById(String id) {
-
-		return Optional.ofNullable(mongoTemplate.findById(id, Internal{{capitalizeFirst entity}}Dto.class));
-
+	public Optional<Internal{{entity}}Dto> get{{entity}}ById(String id) {
+		return Optional.ofNullable(mongoTemplate.findById(id, Internal{{entity}}Dto.class));
 	}
 
 	@SuppressWarnings("java:S4449")
-	public List<Internal{{capitalizeFirst entity}}Dto> get{{capitalizeFirst entity}}s(int page, int pageSize) {
+	public List<Internal{{entity}}Dto> get{{entity}}s(int page, int pageSize) {
 		Criteria criteria = Criteria.where(null);
 
 		Query query = Query.query(criteria);
 		query.with(PageRequest.of(page - 1, pageSize, Sort.by(List.of(Order.desc("id")))));
 
-		return mongoTemplate.find(query, Internal{{capitalizeFirst entity}}Dto.class);
+		return mongoTemplate.find(query, Internal{{entity}}Dto.class);
 	}
 }
